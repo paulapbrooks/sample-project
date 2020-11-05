@@ -22,7 +22,7 @@
 #SBATCH --cpus-per-task=8 --mem-per-cpu=14000
 
 # Update with your email 
-#SBATCH --mail-user=YOUREMAIL@princeton.edu
+#SBATCH --mail-user=paulapbrooks@princeton.edu
 #SBATCH --mail-type=BEGIN,END,FAIL
 
 # Remove modules because Singularity shouldn't need them
@@ -45,7 +45,6 @@ echo "Finished running MRIQC on sub-$subj"
 date
 
 # GROUP LEVEL
-# NOTE: group level will only work once you have multiple subjects in your dataset
 echo "Running MRIQC on group"
 
 ./run_mriqc_group.sh
